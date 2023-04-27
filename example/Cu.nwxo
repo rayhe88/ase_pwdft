@@ -1,0 +1,279 @@
+/home/rayhe/Github/PWDFT/build_new3/pwdft (NWChemEx) - Version 1.0
+
+============================== echo of input deck ==============================
+echo
+
+title "pwdft"
+
+permanent_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft
+
+scratch_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft
+
+start pwdft
+
+geometry units angstrom nocenter noautosym noautoz
+  system crystal units angstrom
+    lattice_vectors
+      2.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00
+      0.0000000000000000e+00 2.0000000000000000e+00 0.0000000000000000e+00
+      0.0000000000000000e+00 0.0000000000000000e+00 2.0000000000000000e+00
+  end
+  Cu 0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00
+  Cu 0.0000000000000000e+00 5.0000000000000000e-01 5.0000000000000000e-01
+  Cu 5.0000000000000000e-01 0.0000000000000000e+00 5.0000000000000000e-01
+  Cu 5.0000000000000000e-01 5.0000000000000000e-01 0.0000000000000000e+00
+end
+
+charge 0
+nwpw
+  2d-hcurve
+  lmbfgs
+  cutoff 60
+  xc PBE
+  loop 10 250
+  mult 1
+end
+
+
+
+task pspw gradient
+
+================================================================================
+
+              NorthwestEx Computational Chemistry Package 1.0.0
+           --------------------------------------------------------
+
+                  Pacific Northwest National Laboratory
+                           Richland, WA 99354
+
+                         Copyright (c) 2020
+                  Pacific Northwest National Laboratory
+                       Battelle Memorial Institute
+
+        NWChemEx is an open-source computational chemistry package
+                   distributed under the terms of the
+                 Educational Community License (ECL) 2.0
+        A copy of the license is included with this distribution
+                         in the LICENSE.TXT file
+
+                             ACKNOWLEDGMENT
+                             --------------
+
+       This software and its documentation were developed at the
+       Pacific Northwest National Laboratory, a multiprogram
+       national laboratory, operated for the U.S. Department of Energy
+       by Battelle under Contract Number DE-AC05-76RL01830. Support
+       for this work was provided by the Department of Energy 
+       Office of Advanced Scientific Computing and the Office of Basic
+       Energy Sciences.
+
+       Job information
+       ---------------
+       program               = pwdft (NWChemEx)
+       build configured      = Thu Mar 02 17:11:53 2023
+       source                = /home/rayhe/Github/PWDFT/Nwpw
+       version               = 1.0
+       default psp libraries = /home/rayhe/Github/PWDFT/Nwpw/libraryps
+
+       date                  = Thu Apr 27 15:53:51 2023
+       nproc                 = 1
+       input                 = stdin
+
+
+
+First rtdbstr={"charge":0,"current_task":"task pspw gradient","dbname":"pwdft","driver":null,"foundtask":true,"geometries":{"geometry":{"autosym":0,"autoz":0,"center":0,"charges":[29.0,29.0,29.0,29.0],"conv":1.88972598858,"coords":[0.0,0.0,0.0,0.0,1.88972598858,1.88972598858,1.88972598858,0.0,1.88972598858,1.88972598858,1.88972598858,0.0],"masses":[62.9298,62.9298,62.9298,62.9298],"nion":4,"symbols":["Cu","Cu","Cu","Cu"],"unita":[3.77945197716,0.0,0.0,0.0,3.77945197716,0.0,0.0,0.0,3.77945197716],"velocities":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}},"nwinput_cur":36,"nwinput_lines":["echo","","title \"pwdft\"","","permanent_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","scratch_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","start pwdft","","geometry units angstrom nocenter noautosym noautoz","  system crystal units angstrom","    lattice_vectors","      2.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 2.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 0.0000000000000000e+00 2.0000000000000000e+00","  end","  Cu 0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","  Cu 0.0000000000000000e+00 5.0000000000000000e-01 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 0.0000000000000000e+00 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 5.0000000000000000e-01 0.0000000000000000e+00","end","","charge 0","nwpw","  2d-hcurve","  lmbfgs","  cutoff 60","  xc PBE","  loop 10 250","  mult 1","end","","","","task pspw gradient","",""],"nwinput_nlines":38,"nwpw":{"cutoff":[60.0,120.0],"loop":[10,250],"mapping":3,"minimizer":2,"xc":"pbe"},"permanent_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","psp_library_dir":"","scratch_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","title":"pwdft"}
+First task=2
+
+
+Running energy calculation - rtdbstr = {"charge":0,"current_task":"task pspw gradient","dbname":"pwdft","driver":null,"foundtask":true,"geometries":{"geometry":{"autosym":0,"autoz":0,"center":0,"charges":[29.0,29.0,29.0,29.0],"conv":1.88972598858,"coords":[0.0,0.0,0.0,0.0,1.88972598858,1.88972598858,1.88972598858,0.0,1.88972598858,1.88972598858,1.88972598858,0.0],"masses":[62.9298,62.9298,62.9298,62.9298],"nion":4,"symbols":["Cu","Cu","Cu","Cu"],"unita":[3.77945197716,0.0,0.0,0.0,3.77945197716,0.0,0.0,0.0,3.77945197716],"velocities":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}},"nwinput_cur":36,"nwinput_lines":["echo","","title \"pwdft\"","","permanent_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","scratch_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","start pwdft","","geometry units angstrom nocenter noautosym noautoz","  system crystal units angstrom","    lattice_vectors","      2.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 2.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 0.0000000000000000e+00 2.0000000000000000e+00","  end","  Cu 0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","  Cu 0.0000000000000000e+00 5.0000000000000000e-01 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 0.0000000000000000e+00 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 5.0000000000000000e-01 0.0000000000000000e+00","end","","charge 0","nwpw","  2d-hcurve","  lmbfgs","  cutoff 60","  xc PBE","  loop 10 250","  mult 1","end","","","","task pspw gradient","",""],"nwinput_nlines":38,"nwpw":{"cutoff":[60.0,120.0],"loop":[10,250],"mapping":3,"minimizer":2,"xc":"pbe"},"permanent_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","psp_library_dir":"","scratch_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","title":"pwdft"}
+
+          *****************************************************
+          *                                                   *
+          *               PWDFT PSPW Calculation              *
+          *                                                   *
+          *  [ (Grassmann/Stiefel manifold implementation) ]  *
+          *  [              C++ implementation             ]  *
+          *                                                   *
+          *              version #7.00   02/27/21             *
+          *                                                   *
+          *    This code was developed by Eric J. Bylaska,    *
+          *    Abhishek Bagusetty, David H. Bross, ...        *
+          *                                                   *
+          *****************************************************
+          >>> job started at       Thu Apr 27 15:53:51 2023 <<<
+
+ psp_library: /home/rayhe/Github/PWDFT/Nwpw/libraryps
+
+
+
+ reading formatted psp filename: /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft/Cu.vpp
+ input psi exists, reading from file: /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft/pwdft.movecs
+
+          ==============  summary of input  ==================
+
+ input psi filename: /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft/pwdft.movecs
+
+ number of processors used: 1
+ processor grid           : 1 x1
+ parallel mapping         : 2d-hcurve
+ parallel mapping         : balanced
+
+ options:
+   boundary conditions  = periodic
+   electron spin        = restricted
+   exchange-correlation = PBE96 (White and Bird) parameterization
+
+ elements involved in the cluster:
+      1: Cu  valence charge = 11.0  lmax =2
+             comment = Troullier-Martins pseudopotential
+             pseudopotential type            =  0
+             highest angular component       =  2
+             local potential used            =  0
+             number of non-local projections =  8
+             semicore corrections inlcuded   =  0.480 (radius) 9.261 (charge)
+             cutoff =    2.055   2.299   2.055
+
+ total charge =   0.000
+
+ atom composition:
+   Cu : 4
+
+ initial ion positions (au):
+   1 Cu	(    0.00000    0.00000    0.00000 ) - atomic mass = 62.930
+   2 Cu	(    0.00000    1.88973    1.88973 ) - atomic mass = 62.930
+   3 Cu	(    1.88973    0.00000    1.88973 ) - atomic mass = 62.930
+   4 Cu	(    1.88973    1.88973    0.00000 ) - atomic mass = 62.930
+   G.C.	(    0.94486    0.94486    0.94486 )
+ C.O.M.	(    0.94486    0.94486    0.94486 )
+
+ real space Electric field:
+     Electric Field (au) = (   0.00000    0.00000    0.00000 )
+             Center (au) = (   0.00000    0.00000    0.00000 )
+
+
+ number of electrons: spin up =    22 (  22 per task) down =    22 (  22 per task)
+
+ supercell:
+      volume =      53.99
+      lattice:    a1 = <    3.779    0.000    0.000 >
+                  a2 = <    0.000    3.779    0.000 >
+                  a3 = <    0.000    0.000    3.779 >
+      reciprocal: b1 = <    1.662    0.000    0.000 >
+                  b2 = <    0.000    1.662    0.000 >
+                  b3 = <    0.000    0.000    1.662 >
+      lattice:    a =       3.779 b =      3.779 c =       3.779
+                  alpha =  90.000 beta =  90.000 gamma =  90.000
+      density cutoff =120.000 fft =  20 x   20 x   20  (    1704 waves     1704 per task)
+      wavefnc cutoff = 60.000 fft =  20 x   20 x   20  (     607 waves      607 per task)
+
+ Ewald parameters:
+      energy cutoff = 120.000 fft =  20 x   20 x   20  (    1704 waves     1704 per task)
+      Ewald summation: cut radius =   1.203 and   1
+                       Mandelung Wigner-Seitz =  1.76011888 (alpha =  2.83729748 rs =  2.34458489)
+
+ technical parameters:
+      fixed step: time step =        5.80  ficticious mass =   400000.00
+      tolerance =   1.000e-07 (energy)    1.000e-07 (density)    1.000e-04 (ion)
+      max iterations =       2500 (   10 inner   250 outer)
+      minimizer = Grassmann lmbfgs
+
+
+
+     ================== Grassmann lmbfgs iteration ==================
+          >>> iteration started at Thu Apr 27 15:53:51 2023  <<<
+     iter.                 Energy          DeltaE        DeltaRho
+     ----------------------------------------------------------------
+        10      -1.981288852752e+02   -1.120816e-08    2.397327e-10
+     *** tolerance ok. iteration terminated
+          >>> iteration ended at   Thu Apr 27 15:53:51 2023  <<<
+
+     ==============  energy results (Molecule object)  ==============
+
+
+ number of electrons: spin up=    22.00000  down=    22.00000 (real space)
+
+
+ total     energy    :   -1.9812888528e+02 (   -4.95322e+01 /ion)
+ total orbital energy:    1.3508606553e+02 (    6.14028e+00 /electron)
+ hartree energy      :    8.5740763179e+00 (    3.89731e-01 /electron)
+ exc-corr energy     :   -8.8422205257e+01 (   -4.01919e+00 /electron)
+ ion-ion energy      :   -2.9357076863e+02 (   -7.33927e+01 /ion)
+
+ kinetic (planewave) :    2.6661454331e+02 (    1.21188e+01 /electron)
+ V_local (planewave) :    2.0910891273e+02 (    9.50495e+00 /electron)
+ V_nl    (planewave) :   -3.0043344375e+02 (   -1.36561e+01 /electron)
+ V_Coul  (planewave) :    1.7148152636e+01 (    7.79461e-01 /electron)
+ V_xc    (planewave) :   -5.7352099396e+01 (   -2.60691e+00 /electron)
+ Viral Coefficient   :   -4.9332821888e-01
+
+ orbital energy:
+     4.2981945e+00 ( 116.961eV)
+     3.6351410e+00 (  98.918eV)
+     3.6351398e+00 (  98.918eV)
+     3.6345962e+00 (  98.903eV)
+     3.6345961e+00 (  98.903eV)
+     3.6182323e+00 (  98.458eV)
+     3.6182310e+00 (  98.458eV)
+     3.4777701e+00 (  94.636eV)
+     3.4777699e+00 (  94.636eV)
+     3.4656134e+00 (  94.305eV)
+     3.1352867e+00 (  85.316eV)
+     3.1215838e+00 (  84.943eV)
+     2.9286555e+00 (  79.693eV)
+     2.7658922e+00 (  75.264eV)
+     2.7658920e+00 (  75.264eV)
+     2.7485428e+00 (  74.792eV)
+     2.3074799e+00 (  62.790eV)
+     2.3074778e+00 (  62.790eV)
+     2.2932949e+00 (  62.404eV)
+     2.2265713e+00 (  60.589eV)
+     2.2235358e+00 (  60.506eV)
+     2.2235357e+00 (  60.506eV)
+
+== Center of Charge ==
+
+spin up    = (    0.0000     0.0000    -0.0000 )
+spin down  = (    0.0000     0.0000    -0.0000 )
+     total = (    0.0000     0.0000    -0.0000 )
+ionic      = (    0.9449     0.9449     0.9449 )
+
+== Molecular Dipole wrt Center of Mass ==
+
+mu   = (   41.5740    41.5740    41.5740 ) au
+|mu| =     72.0082 au (   183.0161 Debye )
+
+
+ Ion Forces (au):
+   1 Cu	(   -0.00000   -0.00005   -0.00000 )
+   2 Cu	(   -0.00001    0.00007   -0.00000 )
+   3 Cu	(   -0.00001   -0.00016    0.00000 )
+   4 Cu	(    0.00002    0.00014    0.00000 )
+
+
+ output psi to filename: /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft/pwdft.movecs
+
+ -----------------
+ cputime in seconds
+ prologue    : 1.133e-02
+ main loop   : 1.642e-02
+ epilogue    : 3.357e-03
+ total       : 3.111e-02
+ cputime/step: 4.106e-03 ( 4 evaluations, 1 linesearches)
+
+ Time spent doing      total        step             percent
+ total time            1.774951e+00 4.437377e-01     100.00%
+ total FFT time        3.416732e-03 8.541830e-04       0.19%
+ local potentials      7.468700e-05 1.867175e-05       0.00%
+ non-local potentials  1.417663e-03 3.544157e-04       0.08%
+ ffm_dgemm             3.528520e-04 8.821300e-05       0.02%
+ fmf_dgemm             2.552520e-04 6.381300e-05       0.01%
+ m_diagonalize         1.259654e-03 3.149135e-04       0.07%
+ mmm_multiply          3.546000e-06 8.865000e-07       0.00%
+ SCVtrans              9.138000e-06 2.284500e-06       0.00%
+
+ >>> job completed at     Thu Apr 27 15:53:51 2023 <<<
+
+Next rtdbstr={"charge":0,"current_task":"task pspw gradient","dbname":"pwdft","driver":null,"foundtask":false,"geometries":{"geometry":{"autosym":0,"autoz":0,"center":0,"charges":[29.0,29.0,29.0,29.0],"conv":1.88972598858,"coords":[0.0,0.0,0.0,0.0,1.88972598858,1.88972598858,1.88972598858,0.0,1.88972598858,1.88972598858,1.88972598858,0.0],"masses":[62.9298,62.9298,62.9298,62.9298],"nion":4,"symbols":["Cu","Cu","Cu","Cu"],"unita":[3.77945197716,0.0,0.0,0.0,3.77945197716,0.0,0.0,0.0,3.77945197716],"velocities":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}},"geometry":null,"nwinput_cur":38,"nwinput_lines":["echo","","title \"pwdft\"","","permanent_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","scratch_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","","start pwdft","","geometry units angstrom nocenter noautosym noautoz","  system crystal units angstrom","    lattice_vectors","      2.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 2.0000000000000000e+00 0.0000000000000000e+00","      0.0000000000000000e+00 0.0000000000000000e+00 2.0000000000000000e+00","  end","  Cu 0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00","  Cu 0.0000000000000000e+00 5.0000000000000000e-01 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 0.0000000000000000e+00 5.0000000000000000e-01","  Cu 5.0000000000000000e-01 5.0000000000000000e-01 0.0000000000000000e+00","end","","charge 0","nwpw","  2d-hcurve","  lmbfgs","  cutoff 60","  xc PBE","  loop 10 250","  mult 1","end","","","","task pspw gradient","",""],"nwinput_nlines":38,"nwpw":{"cutoff":[60.0,120.0],"dipole":[41.57396556112244,41.573954100059574,41.57397663973854],"dipole_magnitude":72.00822040317884,"initialize_wavefunction":null,"loop":[10,250],"mapping":3,"minimizer":2,"xc":"pbe"},"permanent_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","psp_library_dir":"","pspw":{"eigenvalues":[4.298194511857619,3.635141022920693,3.6351398457005977,3.634596247288767,3.634596051987753,3.61823230948958,3.6182309644497974,3.4777700669756486,3.477769922572072,3.4656133906681825,3.1352867083612095,3.1215838355702523,2.92865547831647,2.76589218804598,2.7658920064704358,2.7485428159724647,2.307479946765949,2.307477803734483,2.2932948930464203,2.22657129407571,2.2235357657672443,2.2235356971612497],"energies":[-198.12888527521983,135.0860655343971,8.574076317852121,-88.422205257022,-293.5707686311754,266.6145433145733,209.10891272854693,-300.4334437479944,17.148152635704243,-57.352099396432564,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"energy":-198.12888527521983,"fion":[-1.258803844928056e-06,-5.178461709967313e-05,-2.6196584117440343e-06,-1.0399286839555793e-05,6.988368401547192e-05,-2.0321828739652205e-06,-5.729769841665499e-06,-0.0001554073338987347,4.118155045734401e-06,1.5595227649545023e-05,0.0001366577162364855,4.898675115238797e-06],"gradient":[1.258803844928056e-06,5.178461709967313e-05,2.6196584117440343e-06,1.0399286839555793e-05,-6.988368401547192e-05,2.0321828739652205e-06,5.729769841665499e-06,0.0001554073338987347,-4.118155045734401e-06,-1.5595227649545023e-05,-0.0001366577162364855,-4.898675115238797e-06]},"scratch_dir":"/home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft","title":"pwdft"}
+Next task =0
+
+writing rtdbjson = /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft/pwdft.json

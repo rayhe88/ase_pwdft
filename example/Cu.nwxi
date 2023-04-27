@@ -1,0 +1,37 @@
+echo
+
+title "pwdft"
+
+permanent_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft
+
+scratch_dir /home/rayhe/Github/utils_esp/ase_pwdft/example/pwdft
+
+start pwdft
+
+geometry units angstrom nocenter noautosym noautoz
+  system crystal units angstrom
+    lattice_vectors
+      2.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00
+      0.0000000000000000e+00 2.0000000000000000e+00 0.0000000000000000e+00
+      0.0000000000000000e+00 0.0000000000000000e+00 2.0000000000000000e+00
+  end
+  Cu 0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00
+  Cu 0.0000000000000000e+00 5.0000000000000000e-01 5.0000000000000000e-01
+  Cu 5.0000000000000000e-01 0.0000000000000000e+00 5.0000000000000000e-01
+  Cu 5.0000000000000000e-01 5.0000000000000000e-01 0.0000000000000000e+00
+end
+
+charge 0
+nwpw
+  2d-hcurve
+  lmbfgs
+  cutoff 60
+  xc PBE
+  loop 10 250
+  mult 1
+end
+
+
+
+task pspw gradient
+
