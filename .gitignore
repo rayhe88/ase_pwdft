@@ -16,3 +16,5 @@ workspace.code-workspace
 *vpp
 perm/
 *movecs
+*.traj
+vib/
