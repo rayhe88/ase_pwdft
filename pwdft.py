@@ -38,8 +38,8 @@ class PWDFT(FileIOCalculator):
     def write_input(self, atoms, properties, system_changes):
         """ Write input parameters to files"""
         # Prepare perm and scratch directories
-        perm = os.path.abspath(self.parameters.get('perm', 'pwdft'))
-        scratch = os.path.abspath(self.parameters.get('scratch', 'pwdft'))
+        perm = os.path.abspath(self.parameters.get('perm', 'perm'))
+        scratch = os.path.abspath(self.parameters.get('scratch', 'perm'))
         os.makedirs(perm, exist_ok=True)
         os.makedirs(scratch, exist_ok=True)
 

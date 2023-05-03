@@ -330,6 +330,9 @@ def write_pwdft_in(fd, atoms, properties=None, echo=True, twod_hcurve=True, lmbf
     else:
         out = []
 
+    perm = './perm'
+    scratch = './perm'
+
     out.extend(['title "{}"'.format(short_label),
                 'permanent_dir {}'.format(perm),
                 'scratch_dir {}'.format(scratch),
