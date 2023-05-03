@@ -18,3 +18,5 @@ perm/
 *movecs
 *.traj
 vib/
+*nwxi
+*nwxo
